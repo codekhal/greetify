@@ -1,0 +1,22 @@
+{
+  "name": "entry-management-system",
+  "version": "1.0.0",
+  "description": "Office Management App",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codekhal/entry-management-system.git"
+  },
+  "author": "Khushal Vyas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codekhal/entry-management-system/issues"
+  },
+  "homepage": "https://github.com/codekhal/entry-management-system#readme",
+  "dependencies": {
+    "electron": "^7.1.2"
+  }
+}
