@@ -1,10 +1,10 @@
 {
   "name": "entry-management-system",
   "version": "1.0.0",
-  "description": "Office Management App",
+  "description": "A cross platform entry management app build on top of Electron",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron . --disable-gpu"
   },
   "repository": {
     "type": "git",
