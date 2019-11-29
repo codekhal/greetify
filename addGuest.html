@@ -6,27 +6,27 @@
   </head>
 <body>
   <div class="container">
-    <form>
+    <form id="myform">
       <div>
         <label>Enter Guest Name</label>
-        <input type="text" id="item" autofocus>
+        <input type="text" name="name" id="Name" autofocus>
       </div>
       <div>
         <label>Email</label>
-        <input type="text" id="email" autofocus>
+        <input type="text" name="email" id="Email" autofocus>
       </div>
       <div>
         <label>Phone Number</label>
-        <input type="tel" id="phone" autofocus>
+        <input type="tel" name="phone" id="Phone Number" autofocus>
       </div>
       <div>
         <label>Check In Time</label>
-        <input type="datetime" id="inTime" autofocus>
+        <input type="datetime-local" name="inTime" id="InTime" autofocus>
       </div>
       <div>
         <label>Estimated Check Out Time</label>
-        <input type="datetime" id="outTime" autofocus>
-      </div>
+        <input type="datetime-local" name="outTime" id="OutTime" autofocus>
+      </div>  
       <button class="waves-effect waves-light btn" type="submit">Welcome</button>
     </form>
   </div>
@@ -38,9 +38,13 @@
 
     function submitForm(e){
       e.preventDefault();
-      const item = document.querySelector('#item').value;
+      const form = document.getElementById('myform').getElementsByTagName('input');
       console.log(ipcRenderer);
-      ipcRenderer.send('item:add', item);
+      items={}
+      for(let i = 0; i<form.length;i++){
+        items[form[i].id]=form[i].value;
+      }
+      ipcRenderer.send('item:add',items);
     }
   </script>
 </body>
