@@ -38,6 +38,7 @@
 
     function submitForm(e){
       e.preventDefault();
+      document.getElementById('InTime').value = document.getElementById('InTime').value.replace('T',',');
       const form = document.getElementById('myform').getElementsByTagName('input');
       console.log(ipcRenderer);
       items={}
