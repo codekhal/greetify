@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guest Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper light-blue accent-2">
+      <a class="brand-logo center">Welcome To Greetify</a>   
+    </div>
+  </nav>
+  <div style="margin-left: 32%; margin-top: 15%">
+  <img src="./logo/guest-1.png" style="position: fixed;"></div>
+  <ul></ul>
+
+  <!-- We need to integrate current running version of node along with the electron -->
+  <webview id="item" src="index.html" nodeintegration></webview>
+
+  <script>
+    const electron = require('electron');
+    const { ipcRenderer } = electron;
+    const ul = document.querySelector('ul');
+
+    // ipcRenderer.on() function queries all the data which was send through the ipc channel anytime before
+    ipcRenderer.on('item:add', function(e, items){
+      ul.className = 'collection';
+      
+    // Creating an list element and appending behind <ul> element
+      const li = document.createElement('li');
+      li.className = 'collection-item';
+
+    // going through all the entries which are there in our items object and serving it to index.html
+
+      const entries = Object.entries(items);
+      for (const [field, value] of entries) {
+        var arg = field + ":" + value;
+        var text = document.createTextNode(arg);
+        li.appendChild(text);
+        li.appendChild(document.createElement('br'));
+      }
+      var button = document.createElement("button");
+      button.innerHTML = "Check Out";
+      li.appendChild(button);
+      li.setAttribute("id","element");
+      ul.appendChild(li);
+
+    });
+    
+    // when i click on guest exit submenu all the guest are removed in the frontend side, 
+    //though they are stored in our firebase database
+
+    ipcRenderer.on('item:clear', function(){
+      ul.className = '';
+      ul.innerHTML = '';
+    });
+
+    // added a cool feature of removing list of guest entry by double clicking on that
+
+    ul.addEventListener('dblclick', removeItem);
+    function removeItem(e){
+      event.target.remove();
+      if(ul.children.length == 0){
+        ul.className = '';
+      }
+    }
+  </script>
+
+</body>
+</html>

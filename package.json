@@ -1,21 +1,21 @@
 {
-  "name": "entry-management-system",
+  "name": "greetify",
   "version": "1.0.0",
   "description": "A cross platform entry management app build on top of Electron",
-  "main": "index.js",
+  "main": "scripts/index.js",
   "scripts": {
     "start": "electron . --disable-gpu"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codekhal/entry-management-system.git"
+    "url": "git+https://github.com/codekhal/greetify.git"
   },
   "author": "Khushal Vyas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codekhal/entry-management-system/issues"
+    "url": "https://github.com/codekhal/greetify/issues"
   },
-  "homepage": "https://github.com/codekhal/entry-management-system#readme",
+  "homepage": "https://github.com/codekhal/greetify#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "electron": "^7.1.2",
