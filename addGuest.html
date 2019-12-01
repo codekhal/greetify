@@ -1,0 +1,81 @@
+<!-- This is window or html page is for guest entry -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcoming Guests</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  </head>
+<body>
+  <div class="container">
+
+    <!-- getting form ready for guest entry -->
+
+    <form id="myform">
+      <div>
+        <label>Enter Guest Name</label>
+        <input type="text" name="name" id="Name" autofocus>
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="text" name="email" id="Email" autofocus>
+      </div>
+      <div>
+        <label>Phone</label>
+        <input type="tel" name="phone" id="Phone" autofocus>
+      </div>
+      <div>
+        <label>Check In Time</label>
+        <input type="datetime-local" name="inTime" id="InTime" autofocus>
+      </div>
+      <div>
+
+        <!-- There may be case when a guest/client stays more than expected so we can take that into account and do required action accordingly. -->
+        <label>Estimated Check Out Time</label>
+        <input type="datetime-local" name="outTime" id="OutTime" autofocus>
+      </div>  
+      <button class="waves-effect waves-light btn" type="submit">Welcome</button>
+    </form>
+  </div>
+
+  <!-- Script for sending mail and message has been added -->
+  <script src="emailClient.js"></script> 
+
+  <script>
+    const electron = require('electron');
+    const { ipcRenderer } = electron;
+
+    // creating the below function so that I can take values directly when form is submitted and sending host a message as soon as guest enters.
+    function go(){      
+
+      // getting details from the form and storing into variables
+      const mail = document.getElementById('Email').value;
+    const no = document.getElementById('Phone').value;
+    const checkin = document.getElementById('InTime').value;
+      var message = "Hello! Greeting from Greetify. You recently Checked In. Your Check In time is: " + checkin;
+      messenger(mail,no,message);
+    }
+
+    document.querySelector('form').addEventListener('submit', submitForm);
+
+    // Most important function of all, sends form's data via ipcRenderer to index.js 
+     
+    function submitForm(e){
+      e.preventDefault();
+      const form = document.getElementById('myform').getElementsByTagName('input');
+      console.log(ipcRenderer);
+      items={}
+      for(let i = 0; i<form.length;i++){
+        items[form[i].id]=form[i].value;
+      }
+      // Calling the go() function to send host message about the guest entry
+
+      go();    
+
+      // Sending host a message
+      ipcRenderer.send('item:add',items);
+    }
+    
+  </script>
+</body>
+</html>
