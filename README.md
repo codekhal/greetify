@@ -92,23 +92,36 @@ Note: Add *electron .* inside the start script to run.
   - [LICENSE](greetify/LICENSE)
   - [README.md](greetify/README.md)
   - [addGuest.html](greetify/addGuest.html)
-  - [emailClient.js](greetify/emailClient.js)
-  - [firebase.js](greetify/firebase.js)
-  - [guestDetails.html](greetify/guestDetails.html)
   - [index.html](greetify/index.html)
-  - [index.js](greetify/index.js)
-  - [loginHost.html](greetify/loginHost.html)
+  - [list2.md](greetify/list2.md)
   - __logo__
+    - [Greetify.png](greetify/logo/Greetify.png)
     - __favicon_io__
+      - [favicon16.png](greetify/logo/favicon_io/favicon16.png)
       - [favicon.ico](greetify/logo/favicon_io/favicon.ico)
       - [favicon32.png](greetify/logo/favicon_io/favicon32.png)
-      - [favicon16.png](greetify/logo/favicon_io/favicon16.png)
     - [greetify.png](greetify/logo/greetify.png)
     - [guest-1.png](greetify/logo/guest-1.png)
   - [node_modules](greetify/node_modules)
-  - [list2.md](greetify/list2.md)
   - [package-lock.json](greetify/package-lock.json)
   - [package.json](greetify/package.json)
+  - __public__
+    - [addGuest.html](greetify/public/addGuest.html)
+    - [guestDetails.html](greetify/public/guestDetails.html)
+    - [loginHost.html](greetify/public/loginHost.html)
+  - __screenshots__
+    - [1.png](greetify/screenshots/1.png)
+    - [2.png](greetify/screenshots/2.png)
+    - [3.png](greetify/screenshots/3.png)
+    - [4.png](greetify/screenshots/4.png)
+    - [5.png](greetify/screenshots/5.png)
+    - [6.png](greetify/screenshots/6.png)
+    - [7.jpg](greetify/screenshots/7.jpg)
+  - __scripts__
+    - [emailClient.js](greetify/scripts/emailClient.js)
+    - [firebase.js](greetify/scripts/firebase.js)
+    - [index.js](greetify/scripts/index.js)
+
 
 ```
 ## ScreenShots
