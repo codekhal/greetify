@@ -114,20 +114,13 @@ Note: Add *electron .* inside the start script to run.
 ## ScreenShots
 
 <p align="center">
-  ___
-  <img src="./screenshots/1.png"> <br>
-  ___
-  <img src="./screenshots/2.png"> <br>
-  ___
-  <img src="./screenshots/3.png"> <br>
-  ___
-  <img src="./screenshots/4.png"> <br>
-  ___
-  <img src="./screenshots/5.png"> <br>
-  ___
-  <img src="./screenshots/6.png"> <br>
-  ___
-  <img src="./screenshots/7.jpg"> <br>
+  <img src="./screenshots/1.png"> <br><hr/><br>
+  <img src="./screenshots/2.png"> <br><hr/><br>
+  <img src="./screenshots/3.png"> <br><hr/><br>
+  <img src="./screenshots/4.png"> <br><hr/><br>
+  <img src="./screenshots/5.png"> <br><hr/><br>
+  <img src="./screenshots/6.png"> <br><hr/><br>
+  <img src="./screenshots/7.jpg"><br>
 </p>
 
 
