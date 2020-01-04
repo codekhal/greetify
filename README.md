@@ -146,7 +146,7 @@ Kindly follow the [*Contributions Guildlines*](https://gist.github.com/PurpleBoo
 ## Present Contributors
 [![Contributors](https://img.shields.io/github/contributors/codekhal/greetify?style=plastic)](https://github.com/codekhal/greetify/graphs/contributors)
 
-- ### Want to share your ideas
+### Want to share your ideas
 
 `Feel free to reach out to me`
 
