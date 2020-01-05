@@ -6,10 +6,9 @@ const nodemailer = require('nodemailer');
 
 // Nexmo key retrieving
 const nexmo = new Nexmo({
-    apiKey: process.env.apiKey,
-    apiSecret: process.env.apiSecret,
-  });
-
+  apiKey: '01fd6f3b',
+  apiSecret: 'mtkQ7iJW2yPapMNs',
+});
 // Nodemailer setup
 
 let transporter = nodemailer.createTransport({
@@ -18,18 +17,18 @@ host: 'smtp.gmail.com',
 secure: 'true',
 port: '465',
 auth: {
-user: process.env.Email,
-pass: process.env.password
+    user: 'vyas.khushal1999@gmail.com',
+    pass: 'abcd'
 }
 });
 
 // Setting up firebase credentials
 firebase.initializeApp({
-    apiKey: process.env.apiKeyFB,
-    authDomain: process.env.authDomain,
-    databaseURL: process.env.databaseURL,
-    projectId: process.env.projectId,
-    storageBucket: process.env.storageBucket,
+    apiKey: "AIzaSyDG_-iXxQpVwYlaXDGhDxKxUAG4RyDOjPg",
+    authDomain: "greetify-52576.firebaseapp.com",
+    databaseURL: "https://greetify-52576.firebaseio.com",
+    projectId: "greetify-52576",
+    storageBucket: "greetify-52576.appspot.com",
     messagingSenderId: "340375775378"
 });
 
@@ -79,7 +78,7 @@ function createAddGuest() {
         }
     });
 
-    addGuest.loadFile('public/addGuest.html');
+    addGuest.loadFile('addGuest.html');
 
     addGuest.on('close', function() {
         addGuest = null;
@@ -113,7 +112,7 @@ function createHost() {
         }
     });
 
-    host.loadFile('public/loginHost.html');
+    host.loadFile('loginHost.html');
 
     host.on('close', function() {
         host = null;
@@ -132,7 +131,7 @@ function guestDetail() {
         }
     });
 
-    guestDetails.loadFile('public/guestDetails.html');
+    guestDetails.loadFile('guestDetails.html');
 
     guestDetails.on('close', function() {
         guestDetails = null;

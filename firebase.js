@@ -10,11 +10,3 @@ firebase.initializeApp({
 });
 
 let firebase_ref = firebase.database().ref();
-
-function test() {
-    firebase_ref.push({"id": 10});
-
-    return true;
-}
-
-console.log(test());

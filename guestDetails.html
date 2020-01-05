@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <title>Guests Details</title>
-
-  <!-- Adding materialize CSS stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-
 </head>
 <body>
   <nav>
-    <div class="nav-wrapper teal darken-3">
+    <div class="nav-wrapper light-green accent-3">
       <a class="brand-logo center">Welcome To Greetify</a>   
     </div>
   </nav>
@@ -18,10 +14,9 @@
     <ul id='list'></ul>
   </div>
 
-  <webview id="item" src="../public/guestDetails.html" nodeintegration></webview>
+  <webview id="item" src="./guestDetails.html" nodeintegration></webview>
   <script>
 
-    // A very important lines below, what they do is they fetch data from the firebase database and show it on html
 
     const {remote} = require('electron');
     let ref= remote.getGlobal("ref");

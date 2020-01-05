@@ -14,7 +14,7 @@
 [![Stars](https://img.shields.io/github/stars/codekhal/greetify?style=flat)](https://github.com/codekhal/greetify/stargazers)
 ![Made with Electron](https://img.shields.io/badge/Made%20with-electron-blue?style=flat&logo=node)
 
-![Maintained](https://img.shields.io/maintenance/yes/2019)
+![Maintained](https://img.shields.io/maintenance/yes/2020)
 
 ## Index
 
