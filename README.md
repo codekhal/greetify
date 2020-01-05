@@ -75,6 +75,7 @@ $ echo "PASSWORD={your email password}" >> .env
 $ echo "NEXMOAPIKEY={your nexmo api key for sms}" >> .env
 $ echo "NEXMOAPISECRET={your nexmo api secret for sms}" >> .env
 ```
+**It considered a good practice to hid your credentials in .env file and then not pushing onto the version control**
 
 - Finally run the application using 
 
