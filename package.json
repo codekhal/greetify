@@ -21,7 +21,7 @@
     "electron": "^7.2.4",
     "electron-reloader": "^0.3.0",
     "firebase": "^7.5.0",
-    "grpc": "^1.24.2",
+    "grpc": "^1.24.9",
     "nexmo": "^2.5.1",
     "nodemailer": "^6.3.1",
     "xoauth2": "^1.2.0"
