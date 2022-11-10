@@ -18,7 +18,7 @@
   "homepage": "https://github.com/codekhal/greetify#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "electron": "^7.2.4",
+    "electron": "^18.3.7",
     "electron-reloader": "^0.3.0",
     "firebase": "^7.5.0",
     "grpc": "^1.24.2",
